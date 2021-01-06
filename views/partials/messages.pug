@@ -1,0 +1,27 @@
+if typeof errors !== "undefined"
+    each error in errors
+        .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+            p.text-center.py-2.mb-0 #{error.msg}
+            button.close.pt-3(type='button' data-dismiss='alert' aria-label='Close')
+                span(aria-hidden='true') &times;
+    
+if success_msg != ""
+    .alert.alert-success.alert-dismissible.fade.show(role='alert')
+            //- p.text-center.py-2.mb-0 #{success_msg}
+            p.text-center.py-2.mb-0= success_msg
+            button.close.pt-3(type='button' data-dismiss='alert' aria-label='Close')
+                span(aria-hidden='true') &times;
+
+if error_msg != ""
+    .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+            //- p.text-center.py-2.mb-0 #{error_msg}
+            p.text-center.py-2.mb-0= error_msg
+            button.close.pt-3(type='button' data-dismiss='alert' aria-label='Close')
+                span(aria-hidden='true') &times;
+
+if error != ""
+    .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+            //- p.text-center.py-2.mb-0 #{error_msg}
+            p.text-center.py-2.mb-0= error
+            button.close.pt-3(type='button' data-dismiss='alert' aria-label='Close')
+                span(aria-hidden='true') &times;

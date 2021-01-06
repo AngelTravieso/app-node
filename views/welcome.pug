@@ -1,0 +1,11 @@
+extends ./layouts/index
+
+block contenido
+    .row.mt-5
+        .col-md-6.m-auto
+            .card.card-body.text-center
+                h1
+                    i.fab.fa-node-js.fa-3x
+                p Crea una cuenta o Inicia sesión
+                a.btn.btn-primary.btn-block.mb-2(href='/users/register') Registrarse
+                a.btn.btn-secondary.btn-block(href='/users/login') Iniciar Sesión

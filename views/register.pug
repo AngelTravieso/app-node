@@ -1,0 +1,27 @@
+extends ./layouts/index
+
+block contenido
+        .row.mt-5
+        .col-md-6.m-auto
+            .card.card-body
+                h1.text-center.mb-4
+                    i.fas.fa-user-plus
+                    |  Registro
+                include ./partials/messages
+                form(action='/users/register' method='POST')
+                    .form-group
+                    label(for='name') Nombre
+                    input#name.form-control(type='name' name='name' placeholder='Nombre' value= typeof name != 'undefined' ? name : '')
+                    .form-group
+                    label(for='email') Email
+                    input#email.form-control(type='email' name='email' placeholder='Email' value= typeof email != 'undefined' ? email : '')
+                    .form-group
+                    label(for='password') Contraseña
+                    input#password.form-control(type='password' name='password' placeholder='Contraseña' value= typeof password != 'undefined' ? password : '')
+                    .form-group
+                    label(for='password2') Confirmar  Contraseña
+                    input#password2.form-control(type='password' name='password2' placeholder='Confirmar Contraseña' value= typeof password2 != 'undefined' ? password2 : '')
+                    button.btn.btn-primary.btn-block.mt-4(type='submit') Registro
+                p.lead.mt-4
+                    | ¿Tienes una cuenta? 
+                    a(href='/users/login') Iniciar Sesión
